@@ -4,9 +4,20 @@
   .homeContainer {
     flex: 6;
 
-    .widgets {
+    .widgets, .charts {
       display: flex;
       padding: 20px;
+      gap: 20px;
+    }
+    .charts {
+      justify-content: space-between;
+      margin: auto;
+      padding: 5px 20px;
+    }
+    .listContainer {
+      display: flex;
+      padding: 20px;
+      margin: auto;
       gap: 20px;
     }
   }
