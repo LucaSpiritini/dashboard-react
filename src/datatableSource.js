@@ -1,13 +1,14 @@
 export const userColumns = [{
     field: "id", headerName: "ID", width: 70
 }, {
-    field: "user", headerName: "User", width: 230, renderCell: (params) => {
+    field: "user", headerName: "User", width: 230, renderCell: (params) => 
+    {
         return (
             <div className="usernameCell">
                 {params.row.username}
             </div>
         )
-    }
+    },
 }, {
     field: "email", headerName: "Email", width: 250
 }, {
@@ -15,14 +16,14 @@ export const userColumns = [{
 }, {
     field: "about", headerName: "About", width: 200
 }, {
-    field: "status", headerName: "Status", width: 100, renderCell: (params) =>{
+    field: "status", headerName: "Status", width: 100, renderCell: (params) => {
         return (
-            <div className={`cellWithStatus ${params.row.status}`}>
+            <div className={`cellWithStatus ${params.row.status}`} >
                 {params.row.status}
             </div>
         )
     }
-}
+},
 ];
 
 export const userRows = [
