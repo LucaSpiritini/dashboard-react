@@ -9,6 +9,9 @@ import LastProductPhoto from "../../assets/img/accesorio-perro-arnes-rojo.png"
 // ● Panel de detalle de último producto creado.
 
 const Featured = () => {
+
+  
+
   return (
     <div className="featured">
 

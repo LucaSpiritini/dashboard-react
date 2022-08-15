@@ -4,12 +4,12 @@ const ChartRow = (props) => {
   return (
     <tr>
       <td>{props.id}</td>
-      <td>{props.title}</td>
-      <td>{props.rating}</td>
-      <td>{props.awards}</td>
-      <td>{props.length}</td>
+      <td>{props.name}</td>
+      {/* <td>{props.}</td>
+      <td>{props.}</td>
+      <td>{props.}</td> */}
     </tr>
   );
 }
 
-export default ChartRow;
+export default ChartRow

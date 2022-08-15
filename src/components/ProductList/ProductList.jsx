@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import ChartRow from "./ChartRow";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import "./productList.scss";
+
+// Panel con el listado de productos
 
 class Chart extends Component {
   constructor() {
@@ -11,12 +14,12 @@ class Chart extends Component {
   }
 
   componentDidMount() {
-    fetch("/api/movies")
+    fetch("/api/products")
       .then((respuesta) => {
         return respuesta.json();
       })
-      .then((movies) => {
-        this.setState({ tableRowsData: movies.data });
+      .then((products) => {
+        this.setState({ tableRowsData: products.data });
       })
       .catch((error) => console.log(error));
   }
@@ -24,14 +27,13 @@ class Chart extends Component {
   render() {
     return (
       <div className="chart">
-        <div className="top">
+        <div className="productListTop">
           <h1 className="title">Todos los productos</h1>
           <MoreVertIcon fontSize="small" />
         </div>
 
-        <div className="bottom">
+        <div className="productListBottom">
           <table
-            className="table table-bordered"
             id="dataTable"
             width="100%"
             cellSpacing="0"
@@ -39,19 +41,19 @@ class Chart extends Component {
             <thead>
               <tr>
                 <th>Id</th>
-                <th>Título</th>
-                <th>Calificación</th>
-                <th>Premios</th>
-                <th>Duración</th>
+                <th>Nombre de producto</th>
+                {/* <th></th>
+                <th></th>
+                <th></th> */}
               </tr>
             </thead>
             <tfoot>
               <tr>
                 <th>Id</th>
-                <th>Título</th>
-                <th>Calificación</th>
-                <th>Premios</th>
-                <th>Duración</th>
+                <th>Nombre de producto</th>
+                {/* <th></th>
+                <th></th>
+                <th></th> */}
               </tr>
             </tfoot>
             <tbody>
@@ -66,4 +68,4 @@ class Chart extends Component {
   }
 }
 
-export default Chart;
+export default Chart

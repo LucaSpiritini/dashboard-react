@@ -38,10 +38,10 @@ export default Home
 // Total de usuarios - ok
 // Total de categorías - ok
 // ● Panel de detalle de último producto o usuario creado. - ok / ok
+// ● Panel con el listado de productos. - ok
 
 // ● Panel de categorías con el total de productos de cada una.
 
-// ● Panel con el listado de productos.
 // (Opcional) Funcionalidades adicionales:
 // ● Total de productos vendidos / total de ventas.
 // ● Últimos 5 productos vendidos / los 5 más vendidos.
