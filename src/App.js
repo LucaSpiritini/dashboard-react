@@ -6,7 +6,7 @@ import Login from "./pages/Login/Login"
 import New from "./pages/New/New"
 import Single from "./pages/Single/Single"
 import NotFound from "./pages/NotFound/NotFound"
-import { userInputs } from "./formSource"
+import { userInputs, productInputs } from "./formSource"
 
 function App() {
   return (
@@ -29,7 +29,7 @@ function App() {
             <Route path="products">
               <Route index element={ <List /> } />
               <Route path=":productId" element={ <Single /> } />
-              <Route path="new" element={ <New /> } />
+              <Route path="new" element={ <New inputs={ productInputs } title="Agregar producto" /> } />
             </Route>
             
             <Route path="*" element={ <NotFound /> } />

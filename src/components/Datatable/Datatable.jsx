@@ -13,7 +13,7 @@ const Datatable = () => {
       renderCell: () => {
         return (
           <div className="cellAction">
-            <Link to="/" style={{ textDecoration: "none" }}>
+            <Link to="/users/test" style={{ textDecoration: "none" }}>
               <div className="viewButton">View</div>
             </Link>
             <div className="deleteButton">Delete</div>
@@ -26,7 +26,7 @@ const Datatable = () => {
   return (
     <div className="datatable">
       <div className="dataTableTitle">
-        Add New User
+        Users
         <Link to="/users/new" style={{ textDecoration: "none" }} className="link">
           Add New
         </Link>

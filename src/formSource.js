@@ -28,5 +28,38 @@ export const userInputs = [
         label: "Password",
         type: "password",
         placeholder: "*********",
-    }
+    },
+];
+
+export const productInputs = [
+    {
+        id: 1,
+        label: "Title",
+        type: "text",
+        placeholder: "Croquetas",
+    },
+    {
+        id: 2,
+        label: "Description",
+        type: "text",
+        placeholder: "Descripción",
+    },
+    {
+        id: 3,
+        label: "Category",
+        type: "text",
+        placeholder: "Peces, aves, perros ...",
+    },
+    {
+        id: 4,
+        label: "Price",
+        type: "text",
+        placeholder: "100,00",
+    },
+    {
+        id: 5,
+        label: "Stock",
+        type: "text",
+        placeholder: "In stock",
+    },
 ];

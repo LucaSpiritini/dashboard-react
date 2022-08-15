@@ -5,7 +5,12 @@ import AvatarUndef from "../../assets/img/no-img.jpg";
 
 import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined";
 
+import { useState } from "react";
+
 const New = ({ inputs, title }) => {
+
+  const [file, setFile] = useState("");
+
   return (
     <div className="new">
       <Sidebar />
@@ -16,7 +21,10 @@ const New = ({ inputs, title }) => {
         </div>
         <div className="bottom">
           <div className="left">
-            <img src={AvatarUndef} alt="" />
+            <img 
+              src={ file ? "" : AvatarUndef } 
+              alt="" 
+            />
           </div>
           <div className="right">
             <form>
@@ -24,7 +32,12 @@ const New = ({ inputs, title }) => {
                 <label htmlFor="file">
                   Image: <DriveFolderUploadOutlinedIcon className="icon" />
                 </label>
-                <input type="file" id="file" style={{ display: "none" }} />
+                <input 
+                  type="file" 
+                  id="file" 
+                  onChange={ e=> setFile(e.target.files[0]) } 
+                  style={{ display: "none" }} 
+                />
               </div>
 
               {inputs.map((input) => (
