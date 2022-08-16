@@ -5,6 +5,7 @@ import Widget from "../../components/Widget/Widget";
 import LastProduct from "../../components/LastProduct/LastProduct";
 import LastUser from "../../components/LastUser/LastUser";
 import ProductList from "../../components/ProductList/ProductList";
+import Datatable from "../../components/Datatable/Datatable";
 
 const Home = () => {
   return (
@@ -24,6 +25,9 @@ const Home = () => {
         <br />
         <div className="listContainer">
           <ProductList />
+        </div>
+        <div className="datatableContainer">
+          <Datatable />
         </div>
       </div>
     </div>

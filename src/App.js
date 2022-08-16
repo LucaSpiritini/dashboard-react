@@ -6,6 +6,7 @@ import Login from "./pages/Login/Login"
 import New from "./pages/New/New"
 import Single from "./pages/Single/Single"
 import NotFound from "./pages/NotFound/NotFound"
+import ProductList from "./pages/Products/Products"
 import { userInputs, productInputs } from "./formSource"
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
             </Route>
             
             <Route path="products">
-              <Route index element={ <List /> } />
+              <Route index element={ <ProductList /> } />
               <Route path=":productId" element={ <Single /> } />
               <Route path="new" element={ <New inputs={ productInputs } title="Agregar producto" /> } />
             </Route>

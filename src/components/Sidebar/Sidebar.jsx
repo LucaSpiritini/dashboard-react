@@ -2,7 +2,6 @@ import "./sidebar.scss";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import CategoryIcon from "@mui/icons-material/Category";
-import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import QueryStatsIcon from "@mui/icons-material/QueryStats";
 import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
 import HealthAndSafetyIcon from "@mui/icons-material/HealthAndSafety";
@@ -45,10 +44,6 @@ const Sidebar = () => {
               <span>Products</span>
             </li>
           </Link>
-          <li>
-            <LocalShippingIcon className="icon" />
-            <span>Delivery</span>
-          </li>
           <p className="title">USEFUL</p>
           <li>
             <QueryStatsIcon className="icon" />
@@ -94,4 +89,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default Sidebar

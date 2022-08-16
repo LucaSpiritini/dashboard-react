@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import ChartRow from "./ChartRow";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
+// import MoreVertIcon from "@mui/icons-material/MoreVert";
+import { Link } from "react-router-dom";
 import "./productList.scss";
 
 // Panel con el listado de productos
 
-class Chart extends Component {
+class ProductList extends Component {
   constructor() {
     super();
     this.state = {
@@ -14,7 +15,7 @@ class Chart extends Component {
   }
 
   componentDidMount() {
-    fetch("/api/products")
+    fetch("http://localhost:3000/api/products")
       .then((respuesta) => {
         return respuesta.json();
       })
@@ -29,7 +30,9 @@ class Chart extends Component {
       <div className="chart">
         <div className="productListTop">
           <h1 className="title">Todos los productos</h1>
-          <MoreVertIcon fontSize="small" />
+          <Link to="/products/new" style={{ textDecoration: "none" }} className="link">
+            Add New
+          </Link>
         </div>
 
         <div className="productListBottom">
@@ -42,18 +45,12 @@ class Chart extends Component {
               <tr>
                 <th>Id</th>
                 <th>Nombre de producto</th>
-                {/* <th></th>
-                <th></th>
-                <th></th> */}
               </tr>
             </thead>
             <tfoot>
               <tr>
                 <th>Id</th>
                 <th>Nombre de producto</th>
-                {/* <th></th>
-                <th></th>
-                <th></th> */}
               </tr>
             </tfoot>
             <tbody>
@@ -68,4 +65,5 @@ class Chart extends Component {
   }
 }
 
-export default Chart
+// export default Chart
+export default ProductList

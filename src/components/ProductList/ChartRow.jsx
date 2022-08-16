@@ -5,9 +5,6 @@ const ChartRow = (props) => {
     <tr>
       <td>{props.id}</td>
       <td>{props.name}</td>
-      {/* <td>{props.}</td>
-      <td>{props.}</td>
-      <td>{props.}</td> */}
     </tr>
   );
 }
