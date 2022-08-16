@@ -53,7 +53,7 @@ class ProductList extends Component {
                 <th>Nombre de producto</th>
               </tr>
             </tfoot>
-            <tbody>
+            <tbody className="tbody">
               {this.state.tableRowsData.map((row, i) => {
                 return <ChartRow {...row} key={i} />;
               })}

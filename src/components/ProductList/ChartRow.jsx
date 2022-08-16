@@ -1,12 +1,12 @@
-import React from "react";
+import "./productList.scss";
 
 const ChartRow = (props) => {
   return (
-    <tr>
-      <td>{props.id}</td>
-      <td>{props.name}</td>
-    </tr>
+      <tr>
+        <td>{props.id}</td>
+        <td>{props.name}</td>
+      </tr>
   );
-}
+};
 
-export default ChartRow
+export default ChartRow;
